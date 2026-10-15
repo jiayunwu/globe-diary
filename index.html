@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>环游纪 Globe Diary</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="brand">环游纪 · Globe Diary</h1>
+    <nav class="nav">
+      <button data-view="editor" class="active">手账编辑</button>
+      <button data-view="map">世界地图</button>
+      <button data-view="records">旅行记录</button>
+      <button data-view="outfit">穿搭收藏</button>
+      <button data-view="timeline">时间线</button>
+    </nav>
+  </header>
+
+  <main id="app">
+    <section id="editor" class="view">
+      <div class="editor-toolbar">
+        <input id="imgLoader" type="file" accept="image/*" />
+        <button id="addText">添加文字</button>
+        <button id="freeDraw">花边绘制</button>
+        <button id="clearDraw">清除绘制</button>
+        <select id="stickerSelect">
+          <option value="">贴纸</option>
+          <option value="/assets/stickers/sticker1.svg">笑脸</option>
+          <option value="/assets/stickers/sticker2.svg">小邮票</option>
+        </select>
+        <button id="savePage">保存页面</button>
+        <button id="exportPNG">导出 PNG</button>
+      </div>
+      <div class="editor-area">
+        <canvas id="c" width="900" height="1200"></canvas>
+      </div>
+      <div class="editor-hint">提示：长按并拖动图片或文字进行拼贴与排版。支持双指��放/旋转（触屏）。</div>
+    </section>
+
+    <section id="map" class="view hidden">
+      <div id="mapContainer"></div>
+      <div class="map-toolbar">
+        <input id="markerTitle" placeholder="地点名称" />
+        <button id="addMarker">添加旅行点</button>
+        <button id="listMarkers">列出记录</button>
+      </div>
+      <div id="markersList" class="panel hidden"></div>
+    </section>
+
+    <section id="records" class="view hidden">
+      <h2>旅行记录</h2>
+      <div id="recordsList" class="panel"></div>
+      <button id="newRecord">新建记录</button>
+    </section>
+
+    <section id="outfit" class="view hidden">
+      <h2>穿搭收藏</h2>
+      <div id="outfitList" class="panel"></div>
+      <input id="outfitImg" type="file" accept="image/*" />
+      <input id="outfitNote" placeholder="备注 (例如：日系、海边、城市)" />
+      <button id="addOutfit">添加穿搭</button>
+    </section>
+
+    <section id="timeline" class="view hidden">
+      <h2>时间线回顾</h2>
+      <div id="timelineList" class="panel"></div>
+    </section>
+  </main>
+
+  <footer class="footer">本地数据保存在浏览器（localStorage）。适配 iPhone 浏览器与触屏交互。</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.2.4/fabric.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

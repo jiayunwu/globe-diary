@@ -1,0 +1,29 @@
+/* style.css - 简约精致的旅行手账风格，适配手机 */
+:root{
+  --bg:#FFFDF9;--accent:#C49A6C;--muted:#9b8b7a;--card:#FFFFFF;
+}
+*{box-sizing:border-box}
+html,body,#app{height:100%}
+body{margin:0;font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', Arial; background:var(--bg); color:#1b1b1b}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid rgba(0,0,0,0.06);position:sticky;top:0;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.6))}
+.brand{font-size:16px;margin:0;color:var(--accent)}
+.nav button{background:transparent;border:none;padding:8px 10px;margin-left:4px;border-radius:8px}
+.nav button.active{background:var(--accent);color:white}
+main{padding:12px}
+.view{max-width:920px;margin:0 auto}
+.hidden{display:none}
+.editor-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.editor-toolbar input[type=file]{padding:6px}
+.editor-area{border:1px dashed rgba(0,0,0,0.08);background:linear-gradient(180deg,#fff,#fdf8f4);display:flex;justify-content:center;padding:8px;border-radius:10px}
+canvas{width:100%;height:auto;max-width:420px;border-radius:8px;touch-action:none}
+.editor-hint{color:var(--muted);font-size:12px;margin-top:8px}
+.panel{background:var(--card);padding:10px;border-radius:8px;margin-top:10px;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+#mapContainer{height:60vh;border-radius:12px;overflow:hidden}
+.map-toolbar{display:flex;gap:8px;margin-top:8px}
+.footer{text-align:center;padding:14px;color:var(--muted);font-size:12px}
+@media (max-width:480px){
+  .topbar{padding:10px}
+  .brand{font-size:14px}
+  .nav button{padding:6px}
+  canvas{max-width:360px}
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60">
+  <rect x="2" y="6" width="76" height="48" rx="4" fill="#FFF" stroke="#C49A6C"/>
+  <text x="10" y="34" font-size="10" fill="#C49A6C">POST</text>
+  <path d="M60 10 L70 20" stroke="#C49A6C" stroke-width="2"/>
+</svg>
