@@ -1,0 +1,11 @@
+{
+  "name": "globe-diary",
+  "short_name": "GlobeDiary",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFDF9",
+  "theme_color": "#C49A6C",
+  "icons": [
+    { "src": "/assets/stickers/sticker1.svg", "sizes": "64x64", "type": "image/svg+xml" }
+  ]
+}
